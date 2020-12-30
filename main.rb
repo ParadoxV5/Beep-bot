@@ -14,12 +14,14 @@ end
 load_data
 begin
   require 'listen'
-  Listen.to("#{__FILE__}/../") do load_data if _1.any?(DATA_PATH) end.start
+  Listen.to("#{__FILE__}/../") do|modified_files|
+    load_data if modified_files.any?(DATA_PATH)
+  end.start
 rescue LoadError
   warn('`listen` gem not found. You’ll have to restart Beep bot to manually reload `map.csv`.')
 end
 
-BOT = Discordrb::Bot.new(token: File.open("#{__FILE__}/../bot_token.txt") do _1.gets end)
+BOT = Discordrb::Bot.new(token: File.open("#{__FILE__}/../bot_token.txt", &:gets))
 at_exit do BOT.stop end
 
 BOT.message do|event|
