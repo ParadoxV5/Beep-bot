@@ -16,7 +16,10 @@ def load_data
   data = {}
   CSV.foreach(DATA_PATH) do|replace_with, *regexps|
     next unless replace_with
-    regexps.each do|regexp| data[Regexp.new(regexp, true)] = replace_with end
+    regexps.each do|regexp|
+      next unless regexp
+      data[Regexp.new(regexp, true)] = replace_with
+    end
   end
   BOT.watching = ($data = data).length.to_s + ' RegExps'
 end
