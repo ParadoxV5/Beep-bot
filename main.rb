@@ -5,7 +5,8 @@ require('discordrb')
 DATA_PATH = File.expand_path("#{__FILE__}/../map.csv")
 def load_data
   data = {}
-  CSV.foreach(DATA_PATH) do |replace_with, *regexps|
+  CSV.foreach(DATA_PATH) do|replace_with, *regexps|
+    next unless replace_with
     regexps.each do|regexp| data[Regexp.new(regexp, true)] = replace_with end
   end
   $data = data
