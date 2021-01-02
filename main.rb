@@ -40,7 +40,9 @@ end
 
 BOT.message do|event|
   $text = event.text.dup
-  unless ($catches = $data.filter do|regexp, replace_with| $text.gsub!(regexp, replace_with) end).empty?
+  unless ($catches = $data.filter do|regexp, replace_with|
+    $text.gsub!(regexp) do replace_with end
+  end).empty?
     $event_message = event.message
     $event_message.respond(
       '> <@' + event.user.id.to_s + '>' + if $event_message.attachments.empty?
