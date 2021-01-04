@@ -3,6 +3,8 @@ Beep bot is more than another Discord “censor” bot that can filter out coars
 The motivation of writing [this script](main.rb) is that all other censor bots I’ve found out there so far erase triggered messages whole.
 This bot still deletes, but **do** echo the the original message with matching portion(s) [`gsub`](https://ruby-doc.org/core/String.html#method-i-gsub-21)bed.
 
+> Jump to [Usage](#Usage)
+
 Despite adding [real replies](https://support.discord.com/hc/en-us/articles/360057382374-Replies-FAQ) recently, Discord *still* does not let moderators edit out others’ messages (with their name irreversibly noted next to the message), let alone bots gaining such superpower through Discord’s API.
 Echoïng is but a workaround solution.
 Although it can detect replies and files, Discord’s API can’t control reply pings unlike clients can, and neither can repost any files attach by the original message through the original link – attachments are deleted along with the message.
