@@ -31,7 +31,7 @@ Because I don’t have funds myself, **`Beep-bot` must be downloaded and hosted 
 If you’d like to sponsor to host public for all Discord, leave a message!** (If so, the CSV local file will be replaced by in-Discord commands.)
 
 ## Usage
-* Make sure you have required [Gem dependencies](Gemfile) mentioned in [§Features and Dependencies](#Features and Dependencies) installed.
+* Make sure you have required [Gem dependencies](Gemfile) mentioned in [§Features and Dependencies](#Features-and-Dependencies) installed.
 * Create the file `bot_token.txt` in the same directory as `main.rb`, containing your Discord bot’s token.
 (For the confidentiality of both yours and mine, it’s [`.gitignore`](.gitignore)d)
 * Create the file `map.csv` in the same directory. This is the CSV of RegExps and corresponding replacements:
@@ -53,7 +53,7 @@ If you wanna, you can simply fork this MIT-license repo for your own development
 (These are a lot of engineering to avoid accidently purging features of those permissive.)
   * Đïãçríŧìčŝ from your faux *Español/a-Français* fiends.
   * Ligatures (e.g. `æ`)
-  * Z҉a҉l҉g҉o҉ (in case of stealthy snitches?)
+  * ҈Z҉a҉l҉g҉o (in case of stealthy snitches?)
   * £αƞ¢γƬҽאƚ (anyöne _this_ crazy?)
 
 ## Friendly mention
