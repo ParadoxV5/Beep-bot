@@ -33,6 +33,7 @@ Because I don’t have funds myself, **`Beep-bot` must be downloaded and hosted 
 If you’d like to sponsor to host public for all Discord, leave a message!** (If so, the CSV local file will be replaced by in-Discord commands.)
 
 ## Usage
+### Setup
 * Make sure you have required [Gem dependencies](Gemfile) mentioned in [§Features and Dependencies](#Features-and-Dependencies) installed.
 * Create the file `bot_token.txt` in the same directory as `main.rb`, containing your Discord bot’s token.
 (For the confidentiality of both yours and mine, it’s [`.gitignore`](.gitignore)d)
@@ -46,7 +47,10 @@ will replace “[fcuk](https://en.wikipedia.org/wiki/FCUK)ing” with “F🤬in
     * Blank rows and RegExps are ignored when reading the CSV.
   * This file is also [`.gitignore`](.gitignore)d so one may use the same repository for running their bot and commmiting their code updates.
 (It’s actually to avoid uploading swear words to a public repository.)
-
+### Running
+```bash
+main.rb
+```
 ## Won’t Fixes
 If you wanna, you can simply fork this MIT-license repo for your own development.
 * [Rubocop](https://rubocop.org/): Because this is but a script, I went free-style and did not bother restraining myself.
